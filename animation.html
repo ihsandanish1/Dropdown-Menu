@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATION-play-state</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background: black;
+            margin-left: 20px;
+            animation: sample 2s 3s;
+            /* animation-fill-mode: backwards; */
+            /* animation-fill-mode: forwards; */
+            /* animation-fill-mode:both; */
+            animation-play-state: paused;
+        }
+
+        .box:hover {
+            animation-play-state: running;
+        }
+
+        @keyframes sample {
+            0% {
+                background-color: yellow;
+                width: 250px;
+            }
+
+            50% {
+                background-color: rgb(0, 255, 149);
+                width: 350px;
+            }
+
+            100% {
+                background-color: rgb(5, 123, 233);
+                width: 450px;
+            }
+        }
+        .spinner{
+            height: 3px;
+            background: #fff;
+            transition: all 0.3s;
+        }
+        .spinner-middle,
+        .spinner-bottom{
+            margin-top: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="margin-bottom:50px;">IHSAN DANISH : CSS ANIMATION-play-state</h1>
+    <div class="box"></div>
+    <div class="spinner"></div>
+    <div class="spinner"></div>
+    <div class="spinner"></div>
+</body>
+
+</html>
